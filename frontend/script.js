@@ -5,7 +5,7 @@ let currentPosts = [];
 const channel = new BroadcastChannel("riri-blog");
 
 function loadPosts() {
-  fetch("http://localhost:3001/posts?_=" + new Date().getTime())
+  fetch("https://what-riri-thinks.onrender.com/posts?_=" + new Date().getTime())
     .then(res => res.json())
     .then(posts => {
       currentPosts = posts;
@@ -55,7 +55,7 @@ function comment(postId) {
 
   if (!text) return alert("Write something!");
 
-  fetch(`http://localhost:3001/comments/${postId}`, {
+  fetch(`https://what-riri-thinks.onrender.com/comments/${postId}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, text })

@@ -4,7 +4,7 @@ let currentPosts = [];
 const channel = new BroadcastChannel("riri-blog");
 
 function loadPosts() {
-  fetch("http://localhost:3001/posts?_=" + new Date().getTime())
+  fetch("https://what-riri-thinks.onrender.com/posts?_=" + new Date().getTime())
     .then(res => res.json())
     .then(posts => {
       currentPosts = posts;
@@ -59,7 +59,7 @@ function postBlog() {
 
   if (!title || !content) return alert("Please fill both fields");
 
-  fetch("http://localhost:3001/posts", {
+  fetch("https://what-riri-thinks.onrender.com/posts", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title, content })
@@ -83,7 +83,7 @@ function comment(postId) {
 
   if (!text) return alert("Write something!");
 
-  fetch(`http://localhost:3001/comments/${postId}`, {
+  fetch(`https://what-riri-thinks.onrender.com/comments/${postId}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, text })
@@ -102,7 +102,7 @@ function comment(postId) {
 function deleteBlog(id) {
   if (!confirm("Delete this blog post?")) return;
 
-  fetch(`http://localhost:3001/posts/${id}`, {
+  fetch(`https://what-riri-thinks.onrender.com/posts/${id}`, {
     method: "DELETE"
   })
     .then(res => res.json())
@@ -122,7 +122,7 @@ function editBlog(id, oldTitle, oldContent) {
 
   if (!newTitle || !newContent) return;
 
-  fetch(`http://localhost:3001/posts/${id}`, {
+  fetch(`https://what-riri-thinks.onrender.com//posts/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ title: newTitle, content: newContent })
