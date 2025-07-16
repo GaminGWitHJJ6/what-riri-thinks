@@ -1,1 +1,1 @@
-# what-riri-thinks-blog
+# what-riri-thinks
