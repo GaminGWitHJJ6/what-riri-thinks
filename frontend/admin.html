@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - WhatRiriThinks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Admin - WhatRiriThinks</header>
+
+  <!-- Add Blog Form -->
+  <div class="form">
+    <input id="title" placeholder="Blog Title"><br>
+    <textarea id="content" placeholder="Write your blog..."></textarea><br>
+    <button onclick="postBlog()">Post Blog</button>
+  </div>
+
+  <hr>
+
+  <div class="content">
+    <div id="empty-message" class="fade-in hidden">
+    </div>
+
+    <div id="blog-list"></div>
+  </div>
+
+  <footer>
+    <p>📝 Powered by WhatRiriThinks</p>
+  </footer>
+
+  <script src="admin-script.js"></script>
+</body>
+</html>
