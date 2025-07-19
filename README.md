@@ -1,7 +1,7 @@
 # 📝 What Riri Thinks
 
 Welcome to **What Riri Thinks** — a smooth, minimalistic blog platform with a bold black-red-brown color scheme, built for sharing thoughts, stories, and creativity.  
-Only the admin can post blogs, but everyone is welcome to leave their comments!
+Everyone is welcome to leave their comments!
 
 ---
 
@@ -12,10 +12,6 @@ Only the admin can post blogs, but everyone is welcome to leave their comments!
 ---
 
 ## 📁 Features
-
-- 🧠 **Admin Dashboard**
-  - Add, edit, and delete blog posts
-  - Admin-only access via `admin.html`
   
 - 💬 **Comments System**
   - Anyone can leave a comment on a blog
